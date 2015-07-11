@@ -7,7 +7,7 @@ EMAIL = "tomnyberg@gmail.com"
 URL = "https://github.com/ApproximateIdentity/package"
 DESCRIPTION = ("An empty example package.")
 
-SCRIPTS = ['package/package.py']
+SCRIPTS = ['scripts/start_server']
 
 PACKAGES =  ['package']
 
