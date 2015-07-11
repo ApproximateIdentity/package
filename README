@@ -1,0 +1,12 @@
+README
+------
+
+This is a skeleton repo meant as a starting point when building packages. A
+Makefile has been added for convenient installation/uninstallation. The
+relevant commands are the following:
+
+    * `make` -- install the package
+    * `make uninstall` -- uninstall the package
+    * `make reinstall` -- uninstall and reinstall the package
+    * `make clean` -- remove generated temporary files
+    * `make code-analysis` -- run flake8 and pylint on repository
