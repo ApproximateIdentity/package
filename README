@@ -1,12 +1,28 @@
 README
 ------
 
-This is a skeleton repo meant as a starting point when building packages. A
-Makefile has been added for convenient installation/uninstallation. The
-relevant commands are the following:
+This is a skeleton repo meant as a starting point when building packages. It is
+both a skeleton for a basic python package involving a server as well as for a
+debian package using the python packages `dh-virtualenv` and `make-deb`.
+A Makefile has been added for convenient installation/uninstallation.
 
-    * `make` -- install the package
+The relevant commands for building the python package are the following:
+
+    * `make install` -- install the package
     * `make uninstall` -- uninstall the package
     * `make reinstall` -- uninstall and reinstall the package
     * `make clean` -- remove generated temporary files
-    * `make code-analysis` -- run flake8 and pylint on repository
+    * `make code-analysis` -- run flake8 and pylint on repository (requires
+                              flake8 and pylint to be installed!)
+
+The relevant commands for building the debian package are the following:
+
+    * `make clean-debian` -- clean files generated for debian package
+    * `make debian-package` -- build the debian package
+    * `make install-debian` -- install the debian package
+    * `make uninstall-debian` -- uninstall the debian package
+
+In either case, things worked correctly if the following executes correctly at
+the command-line:
+
+    $ start_server
