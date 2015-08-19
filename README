@@ -2,9 +2,29 @@ README
 ------
 
 This is a skeleton repo meant as a starting point when building packages. It is
-both a skeleton for a basic python package involving a server as well as for a
-debian package using the python packages `dh-virtualenv` and `make-deb`.
-A Makefile has been added for convenient installation/uninstallation.
+both a skeleton for a basic python package involving a server. The server can
+be installed the normal way using setuptools and it can also be built as a
+debian package.
+
+
+Debian Package Build Requirements
+---------------------------------
+
+To build the debian package, it is easiest if you have python installed as your
+own user (as opposed to root). The easiest way to do this is probably to
+install the Continuum Anaconda python distribution. You also need the following
+debian/Ubuntu packages installed:
+
+    * dh-virtualenv
+    * python-stdeb
+
+Additionaly, you need the following python package (installable through pip):
+
+    * make-deb
+
+
+Makefile
+--------
 
 The relevant commands for building the python package are the following:
 
@@ -26,3 +46,6 @@ In either case, things worked correctly if the following executes correctly at
 the command-line:
 
     $ start_server
+
+_Note_: Remember to add `/usr/share/python/package/bin/` to your path as that
+is where the debian binaries will be installed.
