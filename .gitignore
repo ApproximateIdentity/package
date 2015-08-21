@@ -1,3 +1,6 @@
 MANIFEST
 *.pyc
 dist/*
+build/*
+debian-build/*
+debian/*
